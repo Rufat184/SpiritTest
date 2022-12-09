@@ -12,7 +12,17 @@ public class HomePageElements {
     @FindBy (id="details-button") public WebElement Access;
     @FindBy (id="proceed-link") public WebElement AcceptLink;
     @FindBy (id="onetrust-accept-btn-handler") public WebElement AcceptButton;
-
+    @FindBy (xpath="//*[@id='t133-wrapper']/div[1]/svg/path[1]") public WebElement CloseLimitedTimeOffer;
+    @FindBy (xpath="//div[@class='ot-sdk-row']") public WebElement AcceptCookiesRow;
+    @FindBy(xpath = "//a[@data-qa='home-page.common-header-login']") public WebElement HeaderSignInLink;
+    @FindBy(id = "ngb-popover-3") public WebElement SignInWindow;
+    @FindBy(id = "home-page-username") public WebElement HomePageUserName;
+    @FindBy(id = "home-page-password") public WebElement HomePageUserPassword;
+    @FindBy(xpath = "//button[@data-qa='home-page.login-input-new-signUp-button']") public WebElement HeaderSignInCTA;
+    @FindBy(xpath = "(//a[@role='button'][normalize-space()='Sign Out'])[3]") public WebElement HeaderSignOutCTA;
+    @FindBy(xpath = "//a[@data-qa='header-logged-in-display-name']") public WebElement HeaderLoggedInUser;
+    //img[@class='guest-icon base-icon ng-star-inserted']
+    @FindBy(xpath = "//img[@class='guest-icon base-icon ng-star-inserted']") public WebElement BaseMemberIcon;
     public HomePageElements(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

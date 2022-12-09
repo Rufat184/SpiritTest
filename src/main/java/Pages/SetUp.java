@@ -26,7 +26,7 @@ public class SetUp {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             app = new AppLib(driver);
-            App().Flow().navigateToUrl("https://qa04.nk.spirit.com/");
+            App().Flow().navigateToUrl("https://qa01.nk.spirit.com/");
         } else if (Browser.equals("Firefox")){
             //System.setProperty("webdriver.gecko.driver", exeF);
             WebDriverManager.firefoxdriver().setup();
