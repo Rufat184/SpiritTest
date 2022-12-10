@@ -19,10 +19,6 @@ public class HomePageMemLogIn extends SetUp {
             App().Pages().myHomePage().StartApp();
     }
 
-    @Test(dependsOnMethods = {"LandingOnHomePage"}, alwaysRun = true)
-    public void ClickOnSignInLinkHeader(){
-        MyElements.HeaderSignInLink.click();
-    }
     //Validate that all Members can to Log In
     @Test(dataProvider = "dataProvider2", dataProviderClass = DataProviderTest.class, dependsOnMethods = {"LandingOnHomePage"}, alwaysRun = true)
     public void MembersLogIn(String userName, String userPassword) throws InterruptedException {
