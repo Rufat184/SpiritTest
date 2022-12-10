@@ -22,7 +22,8 @@ public class HomePageElements {
     @FindBy(xpath = "(//a[@role='button'][normalize-space()='Sign Out'])[3]") public WebElement HeaderSignOutCTA;
     @FindBy(xpath = "//a[@data-qa='header-logged-in-display-name']") public WebElement HeaderLoggedInUser;
     //img[@class='guest-icon base-icon ng-star-inserted']
-    @FindBy(xpath = "//img[@class='guest-icon base-icon ng-star-inserted']") public WebElement BaseMemberIcon;
+    @FindBy(xpath = "(//span[@class='d-lg-block d-none font-weight-bold'][normalize-space()])[5]") public WebElement MemberType;
+    @FindBy(xpath = "(//span[@class='d-lg-block d-none font-weight-bold'][normalize-space()='Free Spirit Silver'])[3]") public WebElement SilverMemberIcon;
     public HomePageElements(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
