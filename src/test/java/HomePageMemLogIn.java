@@ -12,17 +12,13 @@ public class HomePageMemLogIn extends SetUp {
     @Test
     public void LandingOnHomePage() throws InterruptedException {
             MyElements = new HomePageElements(driver);
-            MyElements.Access.click();
-            MyElements.AcceptLink.click();
-            Thread.sleep(3000);
-            MyElements.AcceptButton.click();
-            //MyElements.CloseLimitedTimeOffer.click();
+            App().Pages().myHomePage().LandingOnHomePage();
             App().Pages().myHomePage().StartApp();
     }
 
-    //Validate that all Members can to Log In
+    //Validate that all Members Base, Silver, Gold can to Log In
     @Test(dataProvider = "dataProvider2", dataProviderClass = DataProviderTest.class, dependsOnMethods = {"LandingOnHomePage"}, alwaysRun = true)
-    public void MembersLogIn(String userName, String userPassword) throws InterruptedException {
+    public void MembersLogIn(String userName, String userPassword){
         try{
             MyElements.HeaderSignInLink.click();
             MyElements.HomePageUserName.sendKeys(userName);

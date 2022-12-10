@@ -21,9 +21,12 @@ public class HomePageElements {
     @FindBy(xpath = "//button[@data-qa='home-page.login-input-new-signUp-button']") public WebElement HeaderSignInCTA;
     @FindBy(xpath = "(//a[@role='button'][normalize-space()='Sign Out'])[3]") public WebElement HeaderSignOutCTA;
     @FindBy(xpath = "//a[@data-qa='header-logged-in-display-name']") public WebElement HeaderLoggedInUser;
-    //img[@class='guest-icon base-icon ng-star-inserted']
     @FindBy(xpath = "(//span[@class='d-lg-block d-none font-weight-bold'][normalize-space()])[5]") public WebElement MemberType;
-    @FindBy(xpath = "(//span[@class='d-lg-block d-none font-weight-bold'][normalize-space()='Free Spirit Silver'])[3]") public WebElement SilverMemberIcon;
+    @FindBy(xpath = "//p[contains(text(),'Area')]") public List <WebElement> MacCitiesOrigin;
+    @FindBy(xpath = "//app-station-picker-dropdown[@class='stationPickerDestDropdown ng-tns-c142-3']//div[@class='container pb-2 ng-star-inserted']//p[contains(text(),'Area')]") public List <WebElement> MacCitiesDestination;
+    @FindBy(xpath = "//label[@for='flight-OriginStationCode']") public WebElement OriginField;
+    @FindBy(xpath = "//label[@for='flight-DestinationStationCode']") public WebElement DestinationField;
+
     public HomePageElements(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

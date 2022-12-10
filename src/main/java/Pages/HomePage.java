@@ -13,8 +13,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class HomePage extends SetUp {
-
+public class HomePage {
+    WebDriver driver;
     HomePageElements MyElements;
 
     public HomePage(WebDriver driver) {
@@ -24,5 +24,13 @@ public class HomePage extends SetUp {
 
     public void StartApp (){
         System.out.println("APPLICATION STARTED");
+    }
+
+    public void LandingOnHomePage() throws InterruptedException {
+        MyElements = new HomePageElements(driver);
+        MyElements.Access.click();
+        MyElements.AcceptLink.click();
+        Thread.sleep(3000);
+        MyElements.AcceptButton.click();
     }
 }
