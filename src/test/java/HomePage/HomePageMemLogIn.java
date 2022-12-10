@@ -1,3 +1,5 @@
+package HomePage;
+
 import Elements.HomePageElements;
 import Pages.SetUp;
 import org.testng.Assert;
