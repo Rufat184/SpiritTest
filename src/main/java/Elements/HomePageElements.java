@@ -26,6 +26,7 @@ public class HomePageElements {
     @FindBy(xpath = "//app-station-picker-dropdown[@class='stationPickerDestDropdown ng-tns-c142-3']//div[@class='container pb-2 ng-star-inserted']//p[contains(text(),'Area')]") public List <WebElement> MacCitiesDestination;
     @FindBy(xpath = "//label[@for='flight-OriginStationCode']") public WebElement OriginField;
     @FindBy(xpath = "//label[@for='flight-DestinationStationCode']") public WebElement DestinationField;
+    @FindBy(xpath = "//div[@class='card']//h3[normalize-space()]") public List<WebElement> FreeSpiritTiles;
 
     public HomePageElements(WebDriver driver) {
         this.driver = driver;

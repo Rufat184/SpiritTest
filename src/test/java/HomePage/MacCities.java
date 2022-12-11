@@ -31,7 +31,7 @@ public class MacCities extends SetUp {
         for (int i = 0; i < macCitiesList.size(); i++) {
             System.out.println(macCitiesList.get(i).getText());
             for (int j = 0; j < myMacCitiesExpected.length; j++) {
-                System.out.println(myMacCitiesExpected[j]);
+                //System.out.println(myMacCitiesExpected[j]);
                 Assert.assertEquals(macCitiesList.get(i).getText(), myMacCitiesExpected[i]);
             }
         }
@@ -51,7 +51,7 @@ public class MacCities extends SetUp {
         for (int i = 0; i < macCitiesList.size(); i++) {
             System.out.println(macCitiesList.get(i).getText());
             for (int j = 0; j < myMacCitiesExpected.length; j++) {
-                System.out.println(myMacCitiesExpected[j]);
+                //System.out.println(myMacCitiesExpected[j]);
                 Assert.assertEquals(macCitiesList.get(i).getText(), myMacCitiesExpected[i]);
             }
         }
