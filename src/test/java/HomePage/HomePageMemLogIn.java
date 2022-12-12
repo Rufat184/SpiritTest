@@ -41,6 +41,7 @@ public class HomePageMemLogIn extends SetUp {
             MyElements.HeaderSignOutCTA.click();
         }catch (Exception e){
             System.out.println("Something went wrong " + e);
+            driver.close();
         }
     }
 }
