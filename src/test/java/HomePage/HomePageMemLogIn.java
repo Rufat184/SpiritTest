@@ -40,7 +40,7 @@ public class HomePageMemLogIn extends SetUp {
             Assert.assertTrue(MyElements.MemberType.isDisplayed(), "Member should be logged In");
             MyElements.HeaderSignOutCTA.click();
         }catch (Exception e){
-            System.out.println("Something went wrong");
+            System.out.println("Something went wrong " + e);
         }
     }
 }
