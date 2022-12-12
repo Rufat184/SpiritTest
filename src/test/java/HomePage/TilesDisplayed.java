@@ -6,11 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class FSJSLTOTilesPresence extends SetUp {
+public class TilesDisplayed extends SetUp {
     HomePageElements MyElements;
 
     @Test
