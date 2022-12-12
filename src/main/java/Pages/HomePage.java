@@ -25,7 +25,7 @@ public class HomePage {
     public void StartApp (){
         System.out.println("APPLICATION STARTED");
     }
-
+    //Bypass certificates
     public void LandingOnHomePage() throws InterruptedException {
         MyElements = new HomePageElements(driver);
         MyElements.Access.click();
