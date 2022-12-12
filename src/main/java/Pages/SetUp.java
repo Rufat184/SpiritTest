@@ -4,6 +4,7 @@ import Library.AppLib;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeTest;
@@ -23,8 +24,10 @@ public class SetUp {
                       @Optional("/Users/rufatdadashov/eclipse-workspace/JavaSelenium1/Drivers/geckodriver") String exeF) {
         if (Browser.equals("Chrome")){
             //System.setProperty("webdriver.chrome.driver", exeC);
+            ChromeOptions handlingSSL = new ChromeOptions();
+            handlingSSL.setAcceptInsecureCerts(true);
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(handlingSSL);
             app = new AppLib(driver);
             App().Flow().navigateToUrl("https://qa01.nk.spirit.com/");
         } else if (Browser.equals("Firefox")){

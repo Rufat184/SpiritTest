@@ -29,13 +29,12 @@ public class HomePage {
     public void LandingOnHomePage(){
         try{
             MyElements = new HomePageElements(driver);
-            MyElements.Access.click();
-            MyElements.AcceptLink.click();
-            Thread.sleep(3000);
+//            MyElements.Access.click();
+//            MyElements.AcceptLink.click();
+//            Thread.sleep(3000);
             MyElements.AcceptButton.click();
         }catch (Exception e){
             System.out.println("Something went wrong " + e);
-            driver.close();
         }
 
     }
