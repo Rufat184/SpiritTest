@@ -27,6 +27,11 @@ public class HomePageElements {
     @FindBy(xpath = "//label[@for='flight-OriginStationCode']") public WebElement OriginField;
     @FindBy(xpath = "//label[@for='flight-DestinationStationCode']") public WebElement DestinationField;
     @FindBy(xpath = "//div[@class='card']//h3[normalize-space()]") public List<WebElement> FreeSpiritTiles;
+    @FindBy(xpath = "//label[@for='dropdown-toggle-controler-toggleId']") public WebElement TripTypeArrow;
+    @FindBy(xpath = "//button[@id='roundTrip']") public WebElement TripTypeRoundTrip;
+    @FindBy(xpath = "//button[@id='oneWay']") public WebElement TripTypeOneWay;
+    @FindBy(xpath = "//button[@id='multiCity']") public WebElement TripTypeMultiCity;
+
 
     public HomePageElements(WebDriver driver) {
         this.driver = driver;
