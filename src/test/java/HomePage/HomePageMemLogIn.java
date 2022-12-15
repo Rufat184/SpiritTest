@@ -26,7 +26,7 @@ public class HomePageMemLogIn extends SetUp {
             MyElements.HomePageUserName.sendKeys(userName);
             MyElements.HomePageUserPassword.sendKeys(userPassword);
             MyElements.HeaderSignInCTA.click();
-            Thread.sleep(8000);
+            Thread.sleep(5000);
             MyElements.HeaderLoggedInUser.click();
             String myMember = MyElements.MemberType.getText();
             //System.out.println(myMember);
