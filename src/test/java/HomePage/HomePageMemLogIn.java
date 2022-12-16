@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import Library.DataProviderTest;
 
-import java.time.Duration;
-
 public class HomePageMemLogIn extends SetUp {
     HomePageElements MyElements;
 
@@ -30,13 +28,24 @@ public class HomePageMemLogIn extends SetUp {
             MyElements.HeaderLoggedInUser.click();
             String myMember = MyElements.MemberType.getText();
             //System.out.println(myMember);
-            if (myMember.equals("FREE SPIRIT")){
-                System.out.println("Welcome " + myMember);
-            } else if(myMember.equals("FREE SPIRIT SILVER")){
-                System.out.println("Welcome " + myMember);
-            } else if(myMember.equals("FREE SPIRIT GOLD")){
-                System.out.println("Welcome " + myMember);
+            switch (myMember){
+                case "FREE SPIRIT":
+                    System.out.println("Welcome FREE SPIRIT");
+                    break;
+                case "FREE SPIRIT SILVER":
+                    System.out.println("Welcome FREE SPIRIT SILVER");
+                    break;
+                case "FREE SPIRIT GOLD":
+                    System.out.println("Welcome FREE SPIRIT GOLD");
+                    break;
             }
+//            if (myMember.equals("FREE SPIRIT")){
+//                System.out.println("Welcome " + myMember);
+//            } else if(myMember.equals("FREE SPIRIT SILVER")){
+//                System.out.println("Welcome " + myMember);
+//            } else if(myMember.equals("FREE SPIRIT GOLD")){
+//                System.out.println("Welcome " + myMember);
+//            }
             Assert.assertTrue(MyElements.MemberType.isDisplayed(), "Member should be logged In");
             MyElements.HeaderSignOutCTA.click();
         }catch (Exception e){
