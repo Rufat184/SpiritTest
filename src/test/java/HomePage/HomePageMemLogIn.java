@@ -12,7 +12,7 @@ public class HomePageMemLogIn extends SetUp {
     HomePageElements MyElements;
 
     @Test
-    public void LandingOnHomePage() throws InterruptedException {
+    public void LandingOnHomePage() {
             MyElements = new HomePageElements(driver);
             App().Pages().myHomePage().LandingOnHomePage();
             App().Pages().myHomePage().StartApp();
