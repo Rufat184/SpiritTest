@@ -25,6 +25,8 @@ public class HomePageElements {
     @FindBy(xpath = "//p[contains(text(),'Area')]") public List <WebElement> MacCitiesOrigin;
     @FindBy(xpath = "//app-station-picker-dropdown[@class='stationPickerDestDropdown ng-tns-c142-3']//div[@class='container pb-2 ng-star-inserted']//p[contains(text(),'Area')]") public List <WebElement> MacCitiesDestination;
     @FindBy(xpath = "//label[@for='flight-OriginStationCode']") public WebElement OriginField;
+    @FindBy(xpath = "//div[@class='container pb-1']//h4[@class='station-picker-typeahead__station-code']") public List <WebElement> SortedOriginFieldList;
+    @FindBy(xpath = "//div[@class='city-selection station-list station-list-picker-origin ng-tns-c142-3']//div[@class='d-flex flex-column flex-wrap ng-star-inserted']") public List <WebElement> AllCitiesOriginFieldList;
     @FindBy(xpath = "//label[@for='flight-DestinationStationCode']") public WebElement DestinationField;
     @FindBy(xpath = "//div[@class='card']//h3[normalize-space()]") public List<WebElement> FreeSpiritTiles;
     @FindBy(xpath = "//label[@for='dropdown-toggle-controler-toggleId']") public WebElement TripTypeArrow;

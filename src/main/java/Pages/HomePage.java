@@ -33,9 +33,22 @@ public class HomePage {
 //            MyElements.AcceptLink.click();
             Thread.sleep(3000);
             MyElements.AcceptButton.click();
-        }catch (Exception e){
+        }catch (Exception e) {
             System.out.println("Something went wrong " + e);
         }
+    }
 
+    public void OriginField(String departureCity){
+        MyElements.OriginField.sendKeys(departureCity);
+        List<WebElement> departure = MyElements.SortedOriginFieldList;
+        for (WebElement option : departure) {
+            if (option.getText().equalsIgnoreCase(departureCity)) {
+                System.out.println(option.getText());
+                option.click();
+                System.out.println("Departure CITY IS FOUND and selected");
+                break;
+            }
+        }
+        System.out.println("Departure City is " + MyElements.OriginField.getText());
     }
 }

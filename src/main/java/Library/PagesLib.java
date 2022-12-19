@@ -16,6 +16,4 @@ public class PagesLib {
     public HomePage myHomePage(){
         return homepage;
     }
-
-
 }
