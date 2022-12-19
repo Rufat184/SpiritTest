@@ -12,6 +12,8 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import static org.hamcrest.CoreMatchers.is;
+import static org.testng.Assert.assertFalse;
 
 public class HomePage {
     WebDriver driver;
@@ -48,7 +50,22 @@ public class HomePage {
                 System.out.println("Departure CITY IS FOUND and selected");
                 break;
             }
+            Assert.assertFalse(departure.isEmpty());
         }
         System.out.println("Departure City is " + MyElements.OriginField.getText());
+    }
+
+    public void ToField(String destinationCity){
+        MyElements.DestinationField.sendKeys(destinationCity);
+        List<WebElement> destination = MyElements.SortedOriginFieldList;
+        for (WebElement option : destination) {
+            if (option.getText().equalsIgnoreCase(destinationCity)) {
+                System.out.println(option.getText());
+                option.click();
+                System.out.println("Destination CITY IS FOUND and selected");
+                break;
+            }
+        }
+        System.out.println("Departure City is " + MyElements.DestinationField.getText());
     }
 }
